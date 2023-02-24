@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: #82d3e5;
+}
+.textContainer {
+  color: #fff;
+  margin: 2em auto;
+  text-align: center;
+  width: 100%;
+}
+.textContainer .title {
+  font-size: 3.5em;
+  font-weight: 500;
+  margin-bottom: 0.25em;
+  letter-spacing: 1.5px;
+}
+.textContainer .text {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.cardContainer {
+  width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.cardContainer .card {
+  width: 150px;
+  height: 170px;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: #fff;
+  margin: 0.3em;
+  position: relative;
+  transition: 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+.cardContainer .card .front,
+.cardContainer .card .back {
+  position: absolute;
+  transform: rotateX(0deg);
+  backface-visibility: hidden;
+}
+.cardContainer .card .front {
+  height: 170px;
+  width: 145px;
+  top: 0;
+  left: 0;
+}
+.cardContainer .card .back {
+  height: 120px;
+  width: 120px;
+  top: 25px;
+  left: 15px;
+  transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 700px) {
+  .cardContainer {
+    width: 490px;
+  }
+  .textContainer .title {
+    font-size: 2.5em;
+  }
+  .textContainer .text {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 530px) {
+    .cardContainer {
+        width: 400px;
+    }
+    .cardContainer .card {
+        width: 120px;
+        height: 140px;
+      }
+      .cardContainer .card .front {
+        height: 140px;
+        width: 120px;
+      }
+      .cardContainer .card .back {
+        height: 90px;
+        width: 90px;
+      }
+    .textContainer .title {
+      font-size: 2em;
+    }
+    .textContainer .text {
+      font-size: 0.8em;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .cardContainer {
+        width: 290px;
+    }
+    .cardContainer .card {
+        width: 90px;
+        height: 110px;
+        margin: 0.15em;
+      }
+      .cardContainer .card .front {
+        height: 110px;
+        width: 90px;
+      }
+      .cardContainer .card .back {
+        height: 60px;
+        width: 60px;
+      }
+    .textContainer .title {
+      font-size: 1.6em;
+    }
+    .textContainer .text {
+      font-size: 0.7em;
+    }
+}
